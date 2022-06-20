@@ -1,0 +1,245 @@
+/* google fonts  */
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+:root{
+  --main-color:#19c8fa;
+  --transparent-color:#00414B;
+}
+.navbar .navbar-brand img{
+  color: white;
+  height: 60px;
+}
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+  padding-top: 15px;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+color: rgb(153, 106, 197);
+border-bottom: 2px solid rgb(153, 106, 197);
+}
+/* home */
+.home{
+  height: 100vh;
+}
+.home .container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home .text{
+  flex-basis: 60%;
+  text-align:justify ;
+}
+.home .text h1{
+  padding: 20px;
+}
+.home p{
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+.home .image{
+  flex-basis: 30%;
+  
+}
+.home img{
+  display: none;
+}
+/* how  */
+.how{
+  min-height: 100vh;
+  padding-top: 100px;
+  background-color: var(--transparent-color);
+  color: white;
+}
+.how .container{
+  position: relative;
+  padding-top: 100px;
+}
+.how h1{
+  padding-top: 50px;
+}
+.how .formula{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.how .formula .root{
+  font-size: 5rem;
+  position: relative;
+  top: -100px;
+}
+@media(max-width:992px){
+  .how .formula .root{
+    font-size: 3rem;
+    
+  }
+  
+}
+.how .formula .root::before{
+  content: "(Nmber of roots)";
+  position: absolute;
+  font-size: 1rem;
+  width: max-content;
+  left: -100px;
+  top: 100%;
+}
+.how .formula .tn{
+  font-size: 15rem;
+  font-weight: 600;
+  
+}
+@media(max-width:992px){
+  
+  .how .formula .tn{
+    font-size: 10rem;
+   
+  }
+  
+}
+.how .formula .tn::before{
+  content: "(Tooth number)";
+  position: absolute;
+  font-size: 1rem;
+  width: max-content;
+  left: 50%;
+  top: 90%;
+  font-weight: 400;
+  transform: translateX(-50%);
+}
+.how .formula .ocf{
+  font-size: 5rem;
+    position: relative;
+    top: -100px;
+}
+@media(max-width:992px){
+  
+  .how .formula .ocf{
+    font-size: 3rem;
+      
+  }
+}
+.how .formula .ocf::before{
+  content: "(Orifice-canal-foramin)";
+  position: absolute;
+  font-size: 1rem;
+  width: max-content;
+  left: 10px;
+  top: 100px;
+}
+/* example */
+.examples{
+  text-align: center;
+  min-height: 100vh;
+  margin-top: 500px;
+}
+.examples .container{
+  padding-top: 100px;
+  margin-top: 50px;  
+}
+.examples .content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.examples .example{
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 30%;
+  flex: 1;
+}
+.examples .example .text{
+  text-align: center;
+  padding: 10px;
+}
+ .formula{
+  text-transform: uppercase;
+}
+.formula .tn, .formula  .root{
+  font-weight: bold;
+  font-size: x-large;
+}
+.formula  .nroot, .formula  .ocf{
+  vertical-align: super;
+}
+.examples .example .image img{
+  height: 300px;
+}
+.examples .example:last-child .image img{
+  height: 250px;
+}
+/* doit  */
+.doit{
+ min-height: 100vh;
+ margin-top: 100px;
+}
+.doit h1{
+  padding-top: 100px;
+  text-align: center;
+}
+.doit .content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: auto 50px;
+
+}
+.doit .content .text {
+  margin: 20px;
+}
+#r1, #r2, #r3, #r4{
+  display: none;
+  border: 1px solid black;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.doit .confs{
+  display: none;
+  
+}
+
+.doit .formula{
+  font-size: 2rem;
+    text-align: center;
+    
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    display: none;
+}
+.doit .formula .nroot{
+  font-size: 1.5rem;
+}
+.doit .formula .tn{
+  font-size: 2rem;
+  vertical-align: middle;
+
+}
+.doit .formula .ocf{
+  vertical-align: top;
+  font-size: 1rem;
+}
+
+.doit button{
+  position: relative;
+    left: 50%;
+    padding: 2px 20px;
+}
