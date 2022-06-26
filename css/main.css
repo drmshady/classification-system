@@ -37,10 +37,26 @@ border-bottom: 2px solid rgb(153, 106, 197);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+}
+@media(max-width:776px){
+  .home .container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: column;
+  }
 }
 .home .text{
   flex-basis: 60%;
   text-align:justify ;
+}
+@media(max-width:776px){
+  .home .text{
+    flex-basis: 50%;
+    text-align:center ;
+  }
 }
 .home .text h1{
   padding: 20px;
@@ -48,18 +64,26 @@ border-bottom: 2px solid rgb(153, 106, 197);
 .home p{
   line-height: 1.6;
   font-size: 1.2rem;
+  padding: 20px;
 }
 .home .image{
   flex-basis: 30%;
   
 }
+@media(max-width:776px){
+  .home img{
+    
+    max-height: 200px;
+  }
+}
 .home img{
   display: none;
+  
 }
 /* how  */
 .how{
   min-height: 100vh;
-  padding-top: 100px;
+  
   background-color: var(--transparent-color);
   color: white;
 }
@@ -67,8 +91,19 @@ border-bottom: 2px solid rgb(153, 106, 197);
   position: relative;
   padding-top: 100px;
 }
+@media(max-width:776px){
+  .how .container{
+    
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+  }
+}
 .how h1{
   padding-top: 50px;
+  text-align: center;
 }
 .how .formula{
   display: flex;
@@ -80,6 +115,7 @@ border-bottom: 2px solid rgb(153, 106, 197);
   position: relative;
   top: -100px;
 }
+
 @media(max-width:992px){
   .how .formula .root{
     font-size: 3rem;
@@ -88,12 +124,56 @@ border-bottom: 2px solid rgb(153, 106, 197);
   
 }
 .how .formula .root::before{
-  content: "(Nmber of roots)";
+  content: "(Number of roots)";
   position: absolute;
   font-size: 1rem;
   width: max-content;
   left: -100px;
   top: 100%;
+  font-weight: 400;
+}
+@media(max-width:644px){
+  .how .formula .root{
+    
+    font-size: 2rem;
+    
+  }
+  
+}
+@media(max-width:992px){
+  .how .formula .root::before{
+    content: "(Number of roots)";
+    position: absolute;
+    font-size: 1rem;
+    width: max-content;
+    left: -138px;
+    top: 141%;
+  }
+  
+}
+
+@media(max-width:776px){
+  .how .formula .root::before{
+    content: "(No. of roots)";
+    position: absolute;
+    font-size: 0.8rem;
+    width: max-content;
+    left: -102px;
+    top: 99%;
+  }
+}
+@media(max-width:644px){
+  .how .formula .root::before{
+    
+    content: "(No. of roots)";
+    position: absolute;
+    font-size: 0.8rem;
+    width: max-content;
+    left: -20px;
+    top: 110%;
+    
+  }
+  
 }
 .how .formula .tn{
   font-size: 15rem;
@@ -108,6 +188,18 @@ border-bottom: 2px solid rgb(153, 106, 197);
   }
   
 }
+@media(max-width:644px){
+  .how .formula{
+    flex:1;
+    
+  }
+  .how .formula .tn{
+    font-size: 5rem;
+    
+  }
+  
+  
+}
 .how .formula .tn::before{
   content: "(Tooth number)";
   position: absolute;
@@ -117,6 +209,22 @@ border-bottom: 2px solid rgb(153, 106, 197);
   top: 90%;
   font-weight: 400;
   transform: translateX(-50%);
+}
+@media(max-width:776px){
+  .how .formula .tn::before{
+    
+      
+      font-size: 0.8rem;
+      
+    }
+  
+}
+@media(max-width:644px){
+  .how .formula .tn::before{
+    top:75%;
+    
+  }
+  
 }
 .how .formula .ocf{
   font-size: 5rem;
@@ -136,17 +244,28 @@ border-bottom: 2px solid rgb(153, 106, 197);
   font-size: 1rem;
   width: max-content;
   left: 10px;
-  top: 100px;
+  top: 125px;
+}
+@media(max-width:776px){
+  .how .formula .ocf::before{
+    content: "(Orifice-canal-foramin)";
+    position: absolute;
+    font-size: 0.8rem;
+    width: max-content;
+    left: 10px;
+    top: 75px;
+  }
+  
 }
 /* example */
 .examples{
   text-align: center;
   min-height: 100vh;
-  margin-top: 500px;
+  
 }
 .examples .container{
-  padding-top: 100px;
-  margin-top: 50px;  
+  
+  margin-top: 20px;  
 }
 .examples .content{
   display: flex;
@@ -185,7 +304,8 @@ border-bottom: 2px solid rgb(153, 106, 197);
 /* doit  */
 .doit{
  min-height: 100vh;
- margin-top: 100px;
+ 
+ margin-bottom: 100px;
 }
 .doit h1{
   padding-top: 100px;
@@ -196,7 +316,7 @@ border-bottom: 2px solid rgb(153, 106, 197);
   justify-content: space-between;
   align-items: center;
   padding: auto 50px;
-
+  flex-wrap: wrap;
 }
 .doit .content .text {
   margin: 20px;
@@ -211,6 +331,7 @@ border-bottom: 2px solid rgb(153, 106, 197);
 }
 .doit .confs{
   display: none;
+  flex-wrap: wrap;
   
 }
 
@@ -242,4 +363,5 @@ border-bottom: 2px solid rgb(153, 106, 197);
   position: relative;
     left: 50%;
     padding: 2px 20px;
+    transform: translateX(-50%);
 }
